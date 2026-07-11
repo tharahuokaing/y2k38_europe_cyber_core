@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Y2K38-EUROPE Cyber-Core | Huokaing Thara</title>
+<title>Y2K38-GLOBAL Cyber-Core | Huokaing Thara</title>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Kantumruy+Pro:wght@400;700&display=swap');
 
@@ -247,7 +247,7 @@
 <body>
 <canvas id="binary-canvas"></canvas>
 
-<main class="cyber-container" id="main-frame" aria-label="EUROPE Cyber Security Interface">
+<main class="cyber-container" id="main-frame" aria-label="Global Cyber Security Interface">
     <div id="breach-overlay" aria-live="assertive" aria-atomic="true" aria-relevant="additions">
         <div class="horror-text" id="alert-msg">FATAL_ERROR</div>
     </div>
@@ -256,48 +256,48 @@
         <button class="lang-btn active" onclick="setLang('en', event)" aria-pressed="true">EN</button>
         <button class="lang-btn" onclick="setLang('de', event)" aria-pressed="false">DE</button>
         <button class="lang-btn" onclick="setLang('fr', event)" aria-pressed="false">FR</button>
-        <button class="lang-btn" onclick="setLang('it', event)" aria-pressed="false">IT</button>
         <button class="lang-btn" onclick="setLang('es', event)" aria-pressed="false">ES</button>
+        <button class="lang-btn" onclick="setLang('ru', event)" aria-pressed="false">RU</button>
+        <button class="lang-btn" onclick="setLang('it', event)" aria-pressed="false">IT</button>
         <button class="lang-btn" onclick="setLang('nl', event)" aria-pressed="false">NL</button>
         <button class="lang-btn" onclick="setLang('pl', event)" aria-pressed="false">PL</button>
         <button class="lang-btn" onclick="setLang('se', event)" aria-pressed="false">SE</button>
         <button class="lang-btn" onclick="setLang('fi', event)" aria-pressed="false">FI</button>
         <button class="lang-btn" onclick="setLang('no', event)" aria-pressed="false">NO</button>
-        <button class="lang-btn" onclick="setLang('ua', event)" aria-pressed="false">UA</button>
     </div>
 
     <header style="text-align: center; margin-top: 40px;">
-        <h1 id="title">EURO-SECURITY CORE</h1>
+        <h1 id="title">GLOBAL-SECURITY CORE</h1>
         <p id="live-timer" style="font-size: 0.6rem; color: #555;" aria-live="polite" aria-atomic="true" aria-relevant="text">
-            SCANNING PAN-EUROPEAN NODES...
+            SCANNING GLOBAL STRATEGIC NODES...
         </p>
     </header>
 
     <select id="country-select" onchange="calculateAudit()" aria-label="Select Country">
-        <option value="1.5" selected>GERMANY</option>
+        <option value="2.5" selected>UNITED STATES</option>
+        <option value="1.5">GERMANY</option>
         <option value="1.4">UNITED KINGDOM</option>
         <option value="1.4">FRANCE</option>
+        <option value="1.2">MEXICO</option>
+        <option value="1.3">RUSSIA (CRITICAL)</option>
         <option value="1.2">ITALY</option>
         <option value="1.1">SPAIN</option>
         <option value="1.2">NETHERLANDS</option>
         <option value="1.0">POLAND</option>
         <option value="1.1">SWEDEN</option>
-        <option value="1.0">FINLAND</option>
-        <option value="1.0">NORWAY</option>
-        <option value="1.3">UKRAINE (CRITICAL)</option>
     </select>
 
     <div class="data-display" id="data-list" role="list" aria-label="Security audit steps"></div>
 
     <div id="countdown-container" aria-live="polite" aria-atomic="true" aria-label="Y2K38 countdown timer">
-        Estimated cost to fix Y2K38 per 24h: <span id="y2k38-cost">€0</span><br />
+        Estimated cost to fix Y2K38 per 24h: <span id="y2k38-cost">$0</span><br />
         Time until 32-bit Coordinated Universal Time (UTC) overflow:<br />
         <span id="countdown">Loading...</span>
     </div>
 
     <div style="text-align: center; margin-top: 15px;">
         <div id="total-label" style="font-size: 0.8rem; color: #8b949e;">TOTAL AUDIT</div>
-        <div id="final-total" style="font-size: 2.2rem; color: var(--holo-cyan)">€0</div>
+        <div id="final-total" style="font-size: 2.2rem; color: var(--holo-cyan)">$0</div>
     </div>
 
     <footer style="margin-top: 20px; font-size: 0.6rem; color: #444; text-align: center;">
@@ -325,135 +325,135 @@
 
     const translations = {
         en: {
-            title: "EURO-SECURITY CORE",
+            title: "GLOBAL-SECURITY CORE",
             alert: "CRITICAL BREACH",
             label: "TOTAL COST",
             foot: "ARCHITECT:",
             steps: [
-                { name: "THREAT MODEL", desc: "Identify and assess potential dangers to European system assets." },
-                { name: "BINARY AUDIT", desc: "Evaluate compiled architecture code for Unix epoch anomalies." },
-                { name: "PEN TEST", desc: "Simulate advanced infrastructure attacks to detect vulnerabilities." },
-                { name: "ABI CHECK", desc: "Verify Application Binary Interface integrity across legacy nodes." }
+                { name: "THREAT MODEL", desc: "Identify and assess potential dangers to planetary infrastructure assets." },
+                { name: "BINARY AUDIT", desc: "Evaluate compiled architecture code for standard 32-bit Unix integer overflows." },
+                { name: "PEN TEST", desc: "Simulate advanced multi-vector infrastructure attacks to detect vulnerabilities." },
+                { name: "ABI CHECK", desc: "Verify Application Binary Interface integrity across critical macro nodes." }
             ]
         },
         de: {
-            title: "EURO-SICHERHEITSKERN",
+            title: "GLOBALER SICHERHEITSKERN",
             alert: "KRITISCHER EINBRUCH",
             label: "GESAMTKOSTEN",
             foot: "ARCHITEKT:",
             steps: [
-                { name: "BEDROHUNGSMODELL", desc: "Identifizieren und Bewerten potenzieller Gefahren für europäische Systeme." },
+                { name: "BEDROHUNGSMODELL", desc: "Identifizieren und Bewerten potenzieller Gefahren für globale Systeme." },
                 { name: "BINÄR-AUDIT", desc: "Kompilierten Code auf Anomalien des Unix-Epochen-Fehlers prüfen." },
                 { name: "PEN-TEST", desc: "Simulieren von Angriffen auf die Infrastruktur zur Schwachstellenanalyse." },
                 { name: "ABI-PRÜFUNG", desc: "Überprüfung der Integrität der Anwendungsbinärschnittstelle." }
             ]
         },
         fr: {
-            title: "NOYAU DE SÉCURITÉ EURO",
+            title: "NOYAU DE SÉCURITÉ GLOBALE",
             alert: "BRECHE CRITIQUE",
             label: "COÛT TOTAL",
             foot: "ARCHITECTE:",
             steps: [
-                { name: "MODÈLE DE MENACE", desc: "Identifier et évaluer les dangers potentiels pour les actifs européens." },
+                { name: "MODÈLE DE MENACE", desc: "Identifier et évaluer les dangers potentiels pour les actifs mondiaux." },
                 { name: "AUDIT BINAIRE", desc: "Évaluer le code compilé pour détecter les anomalies de l'époque Unix." },
                 { name: "TEST D'INTRUSION", desc: "Simuler des attaques d'infrastructure pour détecter les vulnérabilités." },
                 { name: "VÉRIFICATION ABI", desc: "Vérifier l'intégrité de l'interface binaire de l'application." }
             ]
         },
+        es: {
+            title: "NÚCLEO DE SEGURIDAD GLOBAL",
+            alert: "BRECHA CRÍTICA",
+            label: "COSTE TOTAL",
+            foot: "ARQUITECTO:",
+            steps: [
+                { name: "MODELO DE AMENAZA", desc: "Identificar y evaluar los peligros potenciales para los activos globales." },
+                { name: "AUDITORÍA BINARIA", desc: "Evaluar el código compilado en busca de anomalías de la época Unix." },
+                { name: "PRUEBA DE PEN", desc: "Simular ataques a la infraestructura para detectar vulnerabilidades." },
+                { name: "CHEQUEO ABI", desc: "Verificar la integridad de la interfaz binaire de la aplicación." }
+            ]
+        },
+        ru: {
+            title: "ГЛОБАЛЬНОЕ ЯДРО БЕЗОПАСНОСТИ",
+            alert: "КРИТИЧЕСКИЙ ВЗЛОМ",
+            label: "ОБЩАЯ СТОИМОСТЬ",
+            foot: "АРХИТЕКТОР:",
+            steps: [
+                { name: "МОДЕЛЬ УГРОЗ", desc: "Идентификация и оценка потенциальных опасностей для глобальных систем." },
+                { name: "БИНАРНЫЙ АУДИТ", desc: "Анализ скомпилированного кода на наличие ошибок переполнения Unix времени." },
+                { name: "ПЕН-ТЕСТ", desc: "Симуляция инфраструктурных атак для выявления уязвимостей." },
+                { name: "ПРОВЕРКА ABI", desc: "Проверка целостности двоичного интерфейса приложений." }
+            ]
+        },
         it: {
-            title: "NUCLEO SICUREZZA EURO",
+            title: "NUCLEO SICUREZZA GLOBALE",
             alert: "VIOLAZIONE CRITICA",
             label: "COSTO TOTALE",
             foot: "ARCHITETTO:",
             steps: [
-                { name: "MODELLO MINACCIE", desc: "Identificare e valutare i potenziali pericoli per i sistemi europei." },
+                { name: "MODELLO MINACCIE", desc: "Identificare e valutare i potenziali pericoli per i sistemi globali." },
                 { name: "AUDIT BINARIO", desc: "Valutare il codice compilato per anomalie dell'epoca Unix." },
                 { name: "PEN TEST", desc: "Simulare attacchi alle infrastrutture per rilevare vulnerabilità." },
                 { name: "PROVA ABI", desc: "Verificare l'integrità dell'interfaccia binaria dell'applicazione." }
             ]
         },
-        es: {
-            title: "NÚCLEO DE SEGURIDAD EURO",
-            alert: "BRECHA CRÍTICA",
-            label: "COSTE TOTAL",
-            foot: "ARQUITECTO:",
-            steps: [
-                { name: "MODELO DE AMENAZA", desc: "Identificar y evaluar los peligros potenciales para los activos europeos." },
-                { name: "AUDITORÍA BINARIA", desc: "Evaluar el código compilado en busca de anomalías de la época Unix." },
-                { name: "PRUEBA DE PEN", desc: "Simular ataques a la infraestructura para detectar vulnerabilidades." },
-                { name: "CHEQUEO ABI", desc: "Verificar la integridad de la interfaz binaria de la aplicación." }
-            ]
-        },
         nl: {
-            title: "EURO-BEVEILIGINGSKERN",
+            title: "GLOBAL-BEVEILIGINGSKERN",
             alert: "KRITIEKE INBREUK",
             label: "TOTALE KOSTEN",
             foot: "ARCHITECT:",
             steps: [
-                { name: "DREIGINGSMODEL", desc: "Identificeer en beoordeel potentiële gevaren voor Europese systemen." },
+                { name: "DREIGINGSMODEL", desc: "Identificeer en beoordeel potentiële gevaren voor wereldwijde systemen." },
                 { name: "BINARY AUDIT", desc: "Evalueer gecompileerde code op Unix-epoch anomalieën." },
                 { name: "PEN TEST", desc: "Simuleer infrastructuuraanvallen om kwetsbaarheden te ontdekken." },
                 { name: "ABI CHECK", desc: "Verifieer de integriteit van de Application Binary Interface." }
             ]
         },
         pl: {
-            title: "RDZEŃ BEZPIECZEŃSTWA EURO",
+            title: "RDZEŃ BEZPIECZEŃSTWA GLOBAL",
             alert: "KRYTYCZNE WŁAMANIE",
             label: "CAŁKOWITY KOSZT",
             foot: "ARCHITEKT:",
             steps: [
-                { name: "MODEL ZAGROŻEŃ", desc: "Identyfikacja i ocena potencjalnych zagrożeń dla zasobów europejskich." },
+                { name: "MODEL ZAGROŻEŃ", desc: "Identyfikacja i ocena potencjalnych zagrożeń dla zasobów globalnych." },
                 { name: "AUDYT BINARNY", desc: "Ocena skompilowanego kodu pod kątem anomalii epoki Unixa." },
                 { name: "TESTY PEN", desc: "Symulacja ataków na infrastrukturę w celu wykrycia podatności." },
                 { name: "KONTROLA ABI", desc: "Weryfikacja integralności interfejsu binarnego aplikacji." }
             ]
         },
         se: {
-            title: "EURO-SÄKERHETSKÄRNA",
+            title: "GLOBAL SÄKERHETSKÄRNA",
             alert: "KRITISKT INBROTT",
             label: "TOTAL KOSTNAD",
             foot: "ARKITEKT:",
             steps: [
-                { name: "HOTMODELLERING", desc: "Identifiera och bedöma potentiella risker för europeiska tillgångar." },
+                { name: "HOTMODELLERING", desc: "Identifiera och bedöma potentiella risker för globala tillgångar." },
                 { name: "BINÄR REVISION", desc: "Utvärdera kompilerad kod för Unix-epoch anomalier." },
                 { name: "PEN-TEST", desc: "Simulera infrastrukturattacker för att upptäcka sårbarheter." },
                 { name: "ABI-KONTROLL", desc: "Verifiera integriteten för Application Binary Interface." }
             ]
         },
         fi: {
-            title: "EURO-TURVALLISUUSYDIN",
+            title: "GLOBAALI TURVALLISUUSYDIN",
             alert: "KRIITTINEN MURTO",
             label: "KOKONAISKUSTANNUS",
             foot: "ARKKITEHTI:",
             steps: [
-                { name: "UHKAMALLINNUS", desc: "Tunnista ja arvioi Euroopan järjestelmiin kohdistuvat uhat." },
+                { name: "UHKAMALLINNUS", desc: "Tunnista ja arvioi globaaleihin järjestelmiin kohdistuvat uhat." },
                 { name: "BINÄÄRIAUDITOINTI", desc: "Arvioi käännettyä koodia Unix-aikakauden poikkeamien varalta." },
                 { name: "PEN-TESTAUS", desc: "Simuloi hyökkäyksiä haavoittuvuuksien havaitsemiseksi." },
                 { name: "ABI-TARKISTUS", desc: "Varmista Application Binary Interface -rajapinnan eheys." }
             ]
         },
         no: {
-            title: "EURO-SIKKERHETSKJERNE",
+            title: "GLOBAL SIKKERHETSKJERNE",
             alert: "KRITISKT BRUDD",
             label: "TOTAL KOSTNAD",
             foot: "ARKITEKT:",
             steps: [
-                { name: "TRUSSELMODELL", desc: "Identifiser og vurder potensielle farer for europeiske systemer." },
+                { name: "TRUSSELMODELL", desc: "Identifiser og vurder potensielle farer for globale systemer." },
                 { name: "BINÆR REVISJON", desc: "Evaluer kompilert kode for Unix-epokeanomalier." },
                 { name: "PEN-TEST", desc: "Simuler infrastrukturangrep for å oppdage sårbarheter." },
                 { name: "ABI-KONTROLL", desc: "Verifiser integriteten til Application Binary Interface." }
-            ]
-        },
-        ua: {
-            title: "ЄВРО-ЯДРО БЕЗПЕКИ",
-            alert: "КРИТИЧНИЙ ЗЛАМ",
-            label: "ЗАГАЛЬНА ВАРТІСТЬ",
-            foot: "АРХІТЕКТОР:",
-            steps: [
-                { name: "МОДЕЛЬ ЗАГРОЗ", desc: "Ідентифікація та оцінка потенційних загроз європейським активам." },
-                { name: "БІНАРНИЙ АУДИТ", desc: "Оцінка комільованого коду на аномалії епохи Unix." },
-                { name: "ПЕН-ТЕСТ", desc: "Симуляція атак на інфраструктуру для виявлення вразливостей." },
-                { name: "ПЕРЕВІРКА ABI", desc: "Перевірка цілісності бінарного інтерфейсу додатків." }
             ]
         }
     };
@@ -466,16 +466,14 @@
     // Y2K38 overflow timestamp (seconds): Jan 19 2038 03:14:07 UTC
     const Y2K38Timestamp = 2147483647;
 
-    // Estimated cost per hour to fix Y2K38 problem - scaled to Euro metrics (€6000/hour)
-    const costPerHour = 6000;
+    const costPerHour = 8000;
     const hoursInDay = 24;
 
     function speakText(text, isHorror = false) {
         synth.cancel();
         const utter = new SpeechSynthesisUtterance(text);
         
-        // Map localized language parameters to browser synthesis engines
-        const langMap = { en: "en-US", de: "de-DE", fr: "fr-FR", it: "it-IT", es: "es-ES", nl: "nl-NL", pl: "pl-PL", se: "sv-SE", fi: "fi-FI", no: "no-NO", ua: "uk-UA" };
+        const langMap = { en: "en-US", de: "de-DE", fr: "fr-FR", es: "es-ES", ru: "ru-RU", it: "it-IT", nl: "nl-NL", pl: "pl-PL", se: "sv-SE", fi: "fi-FI", no: "no-NO" };
         utter.lang = langMap[currentL] || "en-US";
         
         utter.pitch = isHorror ? 0.1 : 1.0;
@@ -543,7 +541,7 @@
         const mult = parseFloat(sel.value);
         const countryText = sel.options[sel.selectedIndex].text;
 
-        if (countryText.includes("UKRAINE")) {
+        if (countryText.includes("RUSSIA")) {
             document.getElementById("main-frame").classList.add("breach-active");
             document.getElementById("breach-overlay").style.display = "block";
             speakText(translations[currentL].alert, true);
@@ -561,55 +559,52 @@
             speakText(countryText);
         }
 
-        // Steps and Euro cost allocation
+        // Steps and dollar cost allocation
         const list = document.getElementById("data-list");
         list.innerHTML = "";
         let tot = 0;
-        const costs = [7500, 5000, 22000, 11000];
+        const costs = [9500, 6500, 26000, 14000];
         translations[currentL].steps.forEach(({name,desc}, i) => {
             const c = costs[i] * mult;
             tot += c;
             const r = document.createElement("div");
             r.className = "data-row";
             r.setAttribute("role", "listitem");
-            r.innerHTML = `<span>${name}</span><span>€${c.toLocaleString()}</span><div class="tooltip-text">${desc}</div>`;
+            r.innerHTML = `<span>${name}</span><span>$${c.toLocaleString()}</span><div class="tooltip-text">${desc}</div>`;
             r.onclick = (e) => {
                 e.stopPropagation();
                 window.open(dnsLink, "_blank", "noopener");
-                speakText(name + " cost is " + c + " euros");
+                speakText(name + " cost is " + c + " dollars");
             };
             list.appendChild(r);
         });
-        document.getElementById("final-total").innerText = `€${Math.round(tot * (0.98 + Math.random() * 0.04)).toLocaleString()}`;
+        document.getElementById("final-total").innerText = `$${Math.round(tot * (0.98 + Math.random() * 0.04)).toLocaleString()}`;
 
         updateY2K38CostAndCountdown();
     }
 
     // Y2K38 countdown and cost update
     function updateY2K38CostAndCountdown() {
-        const now = Math.floor(Date.now() / 1000); // current time in seconds
+        const now = Math.floor(Date.now() / 1000); 
         let secondsLeft = Y2K38Timestamp - now;
         if(secondsLeft < 0) secondsLeft = 0;
 
-        // Calculate countdown parts
         const days = Math.floor(secondsLeft / 86400);
         const hours = Math.floor((secondsLeft % 86400) / 3600);
         const minutes = Math.floor((secondsLeft % 3600) / 60);
         const seconds = secondsLeft % 60;
 
-        // Format countdown string
         const countdownStr = `${days}d ${hours}h ${minutes}m ${seconds}s`;
         document.getElementById("countdown").textContent = countdownStr;
 
-        // Estimate cost to fix Y2K38 problem per 24 hours in Euros
         const cost24h = costPerHour * hoursInDay;
         const costNow = secondsLeft > hoursInDay * 3600 ? cost24h : Math.ceil(costPerHour * (secondsLeft / 3600));
-        document.getElementById("y2k38-cost").textContent = `€${costNow.toLocaleString()}`;
+        document.getElementById("y2k38-cost").textContent = `$${costNow.toLocaleString()}`;
     }
 
     // Timer live ID display update
     setInterval(() => {
-        document.getElementById("live-timer").innerText = `T: ${new Date().toLocaleTimeString()} | ID: EURO_${Math.random()
+        document.getElementById("live-timer").innerText = `T: ${new Date().toLocaleTimeString()} | ID: GLOB_${Math.random()
             .toString(16)
             .slice(2, 6)
             .toUpperCase()}`;
